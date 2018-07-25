@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .a {
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a"></div>
+  <!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script> -->
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.js"></script>
+  <script>
+    var $doc = $(document);
+    console.log($doc);
+    $doc.on('click', '.a', function () {
+      alert('a事件');
+      $(this).removeClass('a').addClass('b');
+    });
+    $doc.on('click', '.b', function () {
+      alert('b事件');
+    });
+  </script>
+</body>
+
+</html>
